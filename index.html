@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/844c0302d0.js"></script>
+</head>
+<body>
+	<div id="app">
+		<header>
+			<div class="logo">
+				<p>MIlano</p>
+				<p>boutique</p>
+			</div>
+			<div class="burger" @click="openmenu = !openmenu">
+				<span class="burger-item"></span>
+				<span class="burger-item"></span>
+				<span class="burger-item"></span>
+			</div>
+			<div class="white_line"></div>
+
+			<nav>
+				<div class="menu_group">
+					<ul v-show="openmenu">
+						<li><a href="#">Главная</a></li>
+						<li
+						@mouseover="alert('u should click me')"
+						@mouseout="menuitem = false">
+							<a href="#">Товары</a>
+						</li>
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">Фотогалерея</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<div class="menu-items" v-show="menuitem">
+			<li>
+				<a 
+				href="#catalogue"
+				@click=changeCommodityGroup(2)>Туфли</a>
+			</li>
+			<li>
+				<a 
+				href="#catalogue"
+				@click=changeCommodityGroup(3)>Сумочки</a>
+			</li>
+		</div>
+		<section id="slider">
+			<div ref='slider'>
+				<div class="slide_1 slide"></div>
+				<div class="slide_2 slide"></div>
+				<div class="slide_3 slide"></div>
+			</div>
+			<div class="dots" ref='dots'>
+				<span class="dot" @click='showSlide(1)'></span>
+				<span class="dot" @click='showSlide(2)'></span>
+				<span class="dot" @click='showSlide(3)'></span>
+			</div>
+		</section>
+	
+	<main>
+		<section id="offer">
+			<h2 class="offer">Мы предлагаем</h2>
+			<div class="commodity_group">
+			<div class="commmodity_block">
+				<div 
+				class="commodity_image_wrapper">
+					<div 
+					class="image_com_block_1 imaage"
+					>
+					</div>
+				</div>
+				<h2 class="block_heading ">Туфли</h2>
+				<p class="block_paragraph">Женская обувь, туфли</p>
+			</div>
+			<div class="commmodity_block">
+				<div class="commodity_image_wrapper">
+					<div class="image_com_block_2 imaage"
+					>
+					</div>
+				</div>
+				<h2 class="block_heading">Сумочки</h2>
+				<p class="block_paragraph">Женская сумочки, клатчи</p>
+			</div>
+			</div>
+		</section>
+
+
+		<section id="catalogue">
+			<h2 class="catalogue_heading">Каталог</h2>
+
+			<div class="catalogue_group">
+				<div class="catalogue_item"
+				@click=changeCommodityGroup(1)>Все</div>
+				<div class="catalogue_item"
+				@click=changeCommodityGroup(2)>Туфли</div>
+				<div class="catalogue_item"
+				@click=changeCommodityGroup(3)>Сумочки</div>
+			</div>
+			<div class="catalogue_commodity_group">
+				
+				<div class="catalogue_commodity" 
+				v-for="one in shown">
+					<div class="catalogue_image" 
+					:style="{backgroundImage: one.imageUrl}"></div>
+					<h2 class="catalogue_commodity_name">{{one.name}}</h2>
+					<p class="catalogue_cost">{{one.cost}}
+					<span class="currency">сум</span>
+				</p>
+				</div>
+				
+			</div>
+		</section>
+		<section id="aboutus">
+			<div class="about_col_1">
+				<div class="about_wrapper">
+				<h2 class="about_heading">О нас</h2>
+				<p class="about_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			</div>
+			<div class="about_col_2">
+				<div class="about_col_2_items"></div>
+				<div class="about_col_2_items"></div>
+				<div class="about_col_2_items"></div>
+				<div class="about_col_2_items"></div>
+			</div>
+		</section>
+		<section id="book">
+			<h2 class="book_heading">Схема оформления заказа</h2>
+			<div class="way_of_booking">
+				<div class="way_of_booking_wrapper">
+					<div class="way_of_booking_item"></div>
+					<p class="way_of_booking_paragraph">Обсудить с менеджером</p>
+				</div>
+				<div class="way_of_booking_wrapper">
+					<div class="way_of_booking_item"></div>
+					<p class="way_of_booking_paragraph">Сначала примерка</p>
+				</div>
+				<div class="way_of_booking_wrapper">
+					<div class="way_of_booking_item"></div>
+					<p class="way_of_booking_paragraph">Обсудить с менеджером</p>
+				</div>
+				<div class="way_of_booking_wrapper">
+					<div class="way_of_booking_item"></div>
+					<p class="way_of_booking_paragraph">Обсудить с менеджером</p>
+				</div>
+			</div>
+			<div class="arrow"></div>
+		</section>
+		<section id="form">
+			<h2 class="form_heading">Заполните форму</h2>
+			<div class="form">
+				<input type="text" 
+				placeholder="ФИО" 
+				v-model="name">
+				<input type="text" 
+				placeholder="Ваш номер" 
+				v-model.number="phone">
+				<input type="email" 
+				placeholder="email"
+				v-model="email">
+				<div href="#" 
+				class="submit"
+				@click="checkForm">Отправить</div>
+			</div>
+			<div class="form_errors">
+				<p v-for="error in errors">{{error}}</p>
+			</div>
+		</section>
+
+	</main>
+	<footer>
+		<div class="footer_1">
+		<div class="footer_item_1">
+			<div class="social_media">
+				<a href="https://www.instagram.com">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				</div>
+			<div class="social_media">
+				<a href="https://m.facebook.com">
+					<i class="fab fa-instagram"></i>
+				</a>
+				</div>
+		</div>
+		<div class="footer_item_2">
+			<div class="logo">
+				<p>MIlano</p>
+				<p>boutique</p>
+			</div>
+		</div>
+		<div class="footer_item_3">
+			<i class="fas fa-phone-alt"></i>
+			<a href="tel:+998935054505" class="phone_number">+998 93 505 4 505</a>
+			<br>
+			<i class="far fa-envelope"></i>
+			<a href="info@sosgroup.pro" class="email_adress">info@sosgroup.pro</a>
+		</div>
+		</div>
+		<div class="footer_between"></div>
+		<div class="footer_2">
+			<p class="allrights">Milano boutique Все права защищены</p>
+			<p class="copyright">© Copyright 2019 - Web developed by 
+				<u>SOS Group</u></p>
+		</div>
+	</footer>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+</html>

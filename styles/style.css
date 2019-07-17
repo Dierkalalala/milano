@@ -1,0 +1,820 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+header {
+	min-height: 35vh;
+	background-color: #2a2a2a;
+	
+}
+html{
+	overflow-x: hidden;
+}
+.logo{
+	margin: auto;
+	color: #d4b36c;
+	font-family: Romul;
+	font-size: 47px;
+	font-weight: 400;
+	text-transform: uppercase;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo p:first-child{
+	font-size: 95px;
+	margin-top: 20px;
+	
+}
+.logo p:last-child{
+	letter-spacing: 0.51px;
+	margin-bottom: 20px;
+}
+.white_line{
+	width: 100%;
+	height: 1px;
+	background-color: #d4b36c;	
+}
+.burger{
+	display: none;
+}
+nav .menu_group ul{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	list-style-type: none;
+}
+nav .menu_group ul li a{
+	text-decoration: none;
+    color: #ffffff;
+    font-family: "Proxima Nova - Semibold";
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+nav {
+	line-height: 20px;
+}
+nav .menu_group ul li a:hover{
+	color: #d4b36c;
+}
+.menu-items{
+	display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(83, 103, 218, 0.12);
+    background-color: #ffffff;
+    min-width: 165px;
+    min-height: 79px;
+    justify-content: space-evenly;
+    left: 557px;
+}
+.menu-items li{
+	list-style-type: none;
+	padding-left: 20px;
+}
+.menu-items li a{
+	text-decoration: none;
+    font-family: "Proxima Nova - Semibold";
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+	color: #2a2a2a;
+}
+.menu-items li a:hover{
+	color: #d4b36c;
+}
+#slider{
+	min-height: 65vh;
+	width: 100%;
+	margin-bottom: 60px;
+}
+.slide_1{
+	background-image: url('../medi/slide_1.jpg');
+}
+.slide_2{
+	background-image: url('../medi/slide_1.jpg');
+}
+.slide_3{
+	background-image: url('../medi/slide_1.jpg');
+}
+.slide{
+	width: 100%;
+	height: 63vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	animation: fade 2s;
+	background-position: center;
+	min-height: 400px;
+}
+.dots{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: -25px;
+}
+.dot{
+	height: 3px;
+    width: 50px;
+    background-color: #fff;
+    opacity: 0.6;
+    display: block;
+    background: black;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.active{
+	opacity: 1;
+	height: 5px;
+	z-index: 2;
+	transition: 2s ease-in-out;
+}
+@keyframes fade{
+	from{
+		transform: rotate(-110deg);
+		transform-origin: -10% -10%
+		
+	};
+	to{
+		transform: rotate(0deg);
+		transform-origin: 0% 0%
+	}
+}
+@keyframes fadeOut {
+	from{
+		transform-origin: 100% 100%;
+	}
+	to{
+		transform: rotate(90deg);
+	}
+}
+.offer{
+	color: #2d2d2d;
+	font-family: "Cormorant Garamond";
+	font-size: 40px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.commodity_group{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.image_com_block_1{
+	background-image: url('../medi/shoes.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 180px;
+	margin: 20px;
+	transition: 0.2s transform;
+}
+.image_com_block_2{
+	background-image: url('../medi/bag.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 180px;
+	margin: 20px;
+	transition: 0.2s transform;
+}
+.commmodity_block{
+	border: 1px solid #d9b76e;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.block_heading{
+	color: #2d2d2d;
+	font-family: "Proxima Nova";
+	font-size: 20px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+.block_paragraph{
+	color: #2d2d2d;
+	font-family: "Proxima Nova";
+	font-size: 15px;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+#offer{
+	margin-bottom: 80px;
+}
+.catalogue_heading{
+	color: #2d2d2d;
+	font-family: "Cormorant Garamond";
+	font-size: 40px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.catalogue_group{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.catalogue_item{
+	color: #b3b3b3;
+	font-family: "Proxima Nova";
+	font-size: 15px;
+	font-weight: 400;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin: 15px;
+	animation: fade 4s;
+}
+.catalogue_commodity_group{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 200px; 
+}
+.catalogue_commodity{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #dedede;
+	margin-bottom: 20px;
+}
+.catalogue_commodity:hover{
+	border: 1px solid #d9b76e;
+}
+.catalogue_image{
+	transition: .2s ease-in-out;
+    -webkit-background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 110px;
+    margin: 20px;
+}
+.catalogue_commodity_name{
+	color: #2d2d2d;
+	font-family: "Proxima Nova";
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.45px;
+	margin-bottom: 10px;
+}
+.catalogue_cost{
+	color: #2d2d2d;
+	font-family: "Proxima Nova";
+	font-size: 25px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.45px;
+	margin-bottom: 10px;
+}
+.currency{
+	font-size: 12px;
+	letter-spacing: 0.45px;
+}
+#aboutus{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin-top: 120px;
+	margin-bottom: 100px;
+}
+.activegroup{
+	border: 1px solid #d9b76e;
+	transition: 4s transform;
+    transform: rotate(360deg);
+}
+.about_col_1{
+	width: 55%;
+	min-height: 400px;
+	background-image: url('../medi/bg.png');
+	display: flex;
+	flex-direction: column;
+
+}
+.about_col_2{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 35%;
+	align-items: flex-start;
+}
+.about_col_2_items{
+	padding: 106px;
+	background-repeat: no-repeat;
+	background-image: url(../medi/about.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center; 
+	margin: 0 20px 20px 20px;
+}
+.about_heading{
+	color: #d4b36c;
+	font-family: "Cormorant Garamond";
+	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom: 55px;
+	font-weight: 400;
+}
+.about_paragraph{
+	color: #ffffff;
+	font-family: "Proxima Nova";
+	font-size: 15px;
+	line-height: 26px;
+}
+.about_wrapper{
+	margin-left: 377px;
+	margin-right: 77px;
+	margin-top: 100px;
+}
+.book_heading{
+	font-family: "Cormorant Garamond";
+	font-size: 55px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+	font-weight: 400;
+	margin-bottom: 80px;
+}
+.way_of_booking{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0px 270px;
+}
+.way_of_booking_item{
+	padding: 40px;
+	background-image: url(../medi/way_1.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
+	margin-bottom: 18px;
+}
+.way_of_booking_paragraph{
+	color: #2d2d2d;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.way_of_booking_wrapper{
+	max-width: 210px;
+}
+
+.arrow{
+	background-image: url(../medi/arrow.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
+	margin: auto;
+	padding: 20px;
+}
+#form{
+	background-image: url(../medi/form-bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form_heading{
+	color: #2d2d2d;
+	font-family: "Cormorant Garamond";
+	font-size: 60px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-top: 70px;
+	margin-bottom: 40px;
+}
+input{
+	min-width: 270px;
+    min-height: 40px;
+    padding: 15px;
+    margin-left: 15px;
+}
+input::placeholder{
+	color: #2d2d2d;
+	font-family: "Proxima Nova";
+	font-size: 13px;
+	font-weight: 400;
+}
+.submit{
+	background-image: url(../medi/sumbit.jpg);
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
+	padding: 19px 70px;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: "Proxima Nova";
+	font-size: 10px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.35px;
+}
+.form{
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 210px;
+}
+footer{
+	min-height: 200px;
+	display: flex;
+	flex-direction: column;
+	background-color: #2a2a2a;
+}
+.footer_1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.fab{
+	color: #fff;
+	margin: 10px;
+}
+.social_media{
+	min-width: 36px;
+    margin: 10px;
+    border: 1px solid #fff;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer_item_1{
+	display: flex;
+}
+.fas{
+	margin-right: 10px;
+}
+.far{
+	color: #d4b36c;
+	min-width: 22px;
+	min-height: 22px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.phone_number{
+	color: #ffffff;
+	font-family: "Proxima Nova";
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.email_adress{
+	color: #ffffff;
+	font-family: "Proxima Nova";
+	font-size: 14px;
+	font-weight: 400;
+}
+.footer_between{
+	height: 1px;
+    width: 100%;
+    background-color: #d4b36c;
+    opacity: 0.14;
+}
+.allrights{
+	color: #9e9e9e;
+	font-family: "Proxima Nova";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0.7px;
+}
+.copyright{
+	color: #9e9e9e;
+	font-family: "Proxima Nova";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0.7px;
+}
+.footer_2{
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 65px;
+    flex-wrap: wrap;
+}
+.catalogue_image:hover{
+	transform: translateY(-20px);
+	transition: .5s ease-in-out;
+}
+.commodity_image_wrapper{
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+.commodity_image{
+	transition: 0.2s transform;
+}
+@keyframes errors{
+	from{
+		transform: scale(-1);
+	}
+	to{
+		transform: scale(1);
+	}
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px){
+	.logo{
+		font-size: 30px;
+		margin-left: 110px;
+	}
+	.logo p:first-child{
+		font-size: 25px;
+	}
+	.burger{
+		display: block;
+		min-height: 20px;
+		flex-direction: column;
+   		justify-content: space-around;
+   		position: relative;
+    	bottom: 60px;
+    	left: 40px;
+	}
+	.burger-item{
+		width: 30px;
+		height: 5px;
+		border-radius: 20%;
+		background-color: #fff;
+		opacity: .7;
+		display: block;
+		margin-bottom: 4px;
+	}
+	.white_line{
+		display: none;
+	}
+	nav .menu_group ul{
+		display: block;
+	}
+	.slide{
+		min-height: 100px;
+		margin-top: -4px;
+	}
+	.commmodity_block{
+		width: 99%;
+	}
+	.image_com_block_1{
+		padding: 130px;
+	}
+	.image_com_block_2{
+		padding: 130px;
+	}
+	.catalogue_heading{
+		font-size: 56px;
+		margin-top: -45px;
+	}
+	.catalogue_group {
+		width: 100%;
+		margin: 0;
+
+	}
+	.catalogue_commodity_group {
+		margin: 0;
+		justify-content: space-evenly;
+	}
+	.catalogue_commodity{
+		width: 45%;
+   	    margin: 1.5%;
+	}
+	.catalogue_item{
+		font-size: 20px;
+	}
+	.about_heading {
+		text-align: center;
+	}
+	.about_col_1{
+		width: 100%;
+		min-height: 0px;
+	}
+	.about_wrapper{
+		margin: 0;
+	}
+	#aboutus{
+		margin-top: 20px;
+	}
+	.about_paragraph{
+		margin-top: -40px;
+	}
+	.about_col_2{
+		width: 100%
+	}
+	.about_col_2_items{
+		margin: 0 10px 10px 10px;
+   		width: 90%;
+	}
+	.book_heading{
+		font-size: 40px;
+		letter-spacing: 0px;
+		font-weight: 400;
+		margin-bottom: 0;
+		margin-top: -50px;
+	}
+	.way_of_booking{
+		flex-direction: column;
+		margin: 0;
+	}
+	.form_heading{
+		font-size: 27px;
+		text-align: center;
+	}
+	input{
+		margin-bottom: 10px;
+	}
+	.submit{
+		margin-bottom: 10px;
+	}
+	.footer_item_2 .logo {
+		margin-left: 0px;
+	}
+	.footer_1{
+		flex-wrap: wrap;
+	}
+	header{
+		min-height: 16vh;
+	}
+	.catalogue_image{
+		padding: 60px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+	nav .menu_group ul{
+		margin: 0px;
+		padding-top: 20px;
+	}
+	.menu-items{
+		left: 210px;
+	}
+	.image_com_block_2{
+		padding: 160px;
+	}
+	.image_com_block_1{
+		padding: 160px;
+	}
+	.commmodity_block{
+		width: 45%;
+	}
+	.catalogue_group{
+		width: 50%;
+
+	}
+	.catalogue_commodity_group{
+		margin: 0;
+		justify-content: space-evenly;
+	}
+	.catalogue_image{
+		padding: 100px;
+		transition: 2s transform;
+	}
+	.catalogue_commodity_name{
+		font-size: 20px;
+	}
+	.catalogue_image:hover{
+	transform: translateY(-20px);
+    transition: 2s transform;
+	}
+	.catalogue_commodity{
+		margin: 0.5%
+	}
+	.about_col_1{
+		width: 100%;
+		min-height: 175px;
+		margin-bottom: 30px;
+	}
+	.about_wrapper{
+		margin: 0px;
+	}
+	.about_col_2_items{
+		margin: 0;
+		padding: 85px;
+	}
+	.about_col_2{
+		width: 100%;
+		justify-content: space-evenly;
+	}
+	#aboutus{
+		margin-bottom: 50px;
+	}
+	.way_of_booking{
+		margin: 0;
+	}
+	input{
+		margin-bottom: 20px;
+	}
+	.submit{
+		margin-bottom: 20px;
+	}
+	.about_heading{
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+	nav .menu_group ul li a{
+		margin-left: 0;
+		margin-right: 19px;
+	}
+	.menu-items{
+		left: 203px;
+		min-width: 100px;
+		
+	}
+	.menu-items li{
+		padding-left: 5px;
+		font-size: 10px;
+	}
+	.catalogue_group{
+		width: 100%;
+		justify-content: space-evenly;
+	}
+	.catalogue_commodity_group{
+		margin: 0;
+		justify-content: space-evenly;
+	}
+	.catalogue_image{
+		padding: 70px;
+	}
+	.about_col_1{
+		width: 100%;
+		min-height: 0;
+	}
+	.about_wrapper{
+		margin: 0;
+	}
+	.about_heading{
+		margin-bottom: 0;
+	}
+	.about_col_2{
+		justify-content: space-evenly;
+		width: 100%;
+	}
+	#aboutus{
+		margin-bottom: 50px;
+	}
+	.way_of_booking{
+		margin: 0;
+		justify-content: space-evenly;
+	}
+	.commmodity_block{
+		margin-bottom: 30px;
+	}
+	.form_heading{
+		text-align: center;
+	}
+	input{
+		margin-bottom: 20px;
+	}
+	.submit{
+		margin-bottom: 20px;
+	}
+	.footer_1{
+		flex-wrap: wrap;
+	}
+	.logo p:first-child{
+		font-size: 45px;
+	}
+	.logo{
+		font-size: 30px;
+	}
+	.about_col_2_items{
+		margin: 0;
+	}
+	header{
+		min-height: 25vh;
+	}
+}
